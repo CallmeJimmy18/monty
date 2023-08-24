@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "monty.h"
+
+void noop(void);
 struct global_vars glob_t = {NULL, NULL};
 /**
  * main - driver program
