@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "monty.h"
-
-void noop(void);
+#define UNSD __attribute__((unused))
+typedef unsigned int uint;
+void _nop(stack_t **stack, unsigned int line_number);
 struct global_vars glob_t = {NULL, NULL};
 /**
  * main - driver program
@@ -56,13 +54,23 @@ int main(int argc, char **argv)
  */
 void fun(stack_t **stack, unsigned int line_number, char *option)
 {
-	instruction_t arr_instructions[2];
+	instruction_t arr_instructions[7];
 	void (*i)(stack_t **stack, unsigned int line_number) = NULL;
 
 	arr_instructions[0].opcode = "push";
 	arr_instructions[0].f = _push;
 	arr_instructions[1].opcode = "pall";
 	arr_instructions[1].f = _pall;
+	arr_instructions[2].opcode = "pint";
+	arr_instructions[2].f = _pint;
+	arr_instructions[3].opcode = "swap";
+	arr_instructions[3].f = _swap;
+	arr_instructions[4].opcode = "pop";
+	arr_instructions[4].f = _pop;
+	arr_instructions[5].opcode = "add";
+	arr_instructions[5].f = _add;
+	arr_instructions[6].opcode = "nop";
+	arr_instructions[6].f = _nop;
 
 	i = isvalid(arr_instructions, option);
 	if (i == NULL)
@@ -76,9 +84,11 @@ void fun(stack_t **stack, unsigned int line_number, char *option)
 		(i)(stack, line_number);
 }
 /**
- * noop - does nothing
+ * _nop - does nothing
+ * @stack: unused
+ * @line_number: Unused
  */
-void noop(void)
+void _nop(UNSD stack_t **stack, UNSD uint line_number)
 {
 }
 

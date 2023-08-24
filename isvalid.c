@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "monty.h"
 /**
  * isvalid - checks if opcode is a valid function
@@ -11,7 +9,7 @@ instruction_function isvalid(instruction_t *codes, char *input)
 {
 	int i = 0;
 
-	while (i < 2)
+	while (i < 7)
 	{
 		if (strcmp(input, codes[i].opcode) == 0)
 			return (codes[i].f);

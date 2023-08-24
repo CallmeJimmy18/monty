@@ -1,5 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * struct global_vars - global variables
  * @ptr: File pointer
@@ -49,4 +54,8 @@ void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **stack);
 int isnumber(char *s);
+void _pop(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
 #endif

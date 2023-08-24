@@ -1,5 +1,8 @@
+
+push    7000
+          push 54
+swap
+nop
 pall
-push 200
-push 300
-push 400
-pall
+ pop
+pint
