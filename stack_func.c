@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
+#include "monty.h"
 /**
  * _push - add item to the top of list
  * @stack: pointer to pointer of list

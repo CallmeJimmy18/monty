@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "main.h"
+#include "monty.h"
 /**
  * isvalid - checks if opcode is a valid function
  * @codes: array of opcodes
